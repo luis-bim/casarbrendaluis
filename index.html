@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Nome & Nome — Nosso Casamento</title>
+  <title>Pedro & Lucas — Nosso Casamento</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
@@ -34,11 +34,15 @@
       font-weight: 400;
     }
 
+    /* Header com imagem de destaque (Capa) */
     header {
       background-color: var(--verde-floresta);
       color: #ffffff;
       text-align: center;
-      padding: 100px 20px;
+      padding: 120px 20px;
+      background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('./assets/fotos/imagem_teste%20(1).jpeg');
+      background-size: cover;
+      background-position: center;
     }
 
     header h1 {
@@ -53,6 +57,7 @@
       text-transform: uppercase;
     }
 
+    /* Menu de Navegação */
     nav {
       background-color: #ffffff;
       display: flex;
@@ -61,6 +66,7 @@
       padding: 15px;
       position: sticky;
       top: 0;
+      z-index: 100;
       box-shadow: 0 2px 5px rgba(0,0,0,0.05);
     }
 
@@ -72,8 +78,9 @@
       text-transform: uppercase;
     }
 
+    /* Seções Globais */
     section {
-      max-width: 800px;
+      max-width: 1000px;
       margin: 60px auto;
       padding: 0 20px;
       text-align: center;
@@ -85,6 +92,54 @@
       margin-bottom: 20px;
     }
 
+    /* Seção da História com Imagem */
+    .historia-container {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 30px;
+      text-align: left;
+    }
+
+    .historia-texto {
+      flex: 1;
+      min-width: 280px;
+    }
+
+    .historia-img {
+      flex: 1;
+      min-width: 280px;
+    }
+
+    .historia-img img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    /* Grid da Galeria de Fotos */
+    .galeria-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 15px;
+      margin-top: 30px;
+    }
+
+    .galeria-grid img {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+      border-radius: 6px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .galeria-grid img:hover {
+      transform: scale(1.03);
+      box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+    }
+
+    /* Botões */
     .btn {
       display: inline-block;
       background-color: var(--verde-floresta);
@@ -102,6 +157,7 @@
       background-color: #1e332a;
     }
 
+    /* Rodapé */
     footer {
       text-align: center;
       padding: 40px;
@@ -113,35 +169,62 @@
 </head>
 <body>
 
+  <!-- Capa (Header) usando a imagem 1 -->
   <header>
     <h1>Pedro & Lucas</h1>
     <p>15 de Outubro de 2026</p>
   </header>
 
+  <!-- Navegação -->
   <nav>
     <a href="#historia">Nossa História</a>
+    <a href="#galeria">Galeria</a>
     <a href="#local">O Local</a>
-    <a href="#presentes">Lista de Presentes</a>
     <a href="#rsvp">RSVP</a>
   </nav>
 
+  <!-- Nossa História usando a imagem 2 -->
   <section id="historia">
     <h2>Nossa História</h2>
-    <p>Bem-vindos ao nosso site! Aqui compartilhamos os detalhes do nosso grande dia e a nossa trajetória até este momento especial.</p>
+    <div class="historia-container">
+      <div class="historia-texto">
+        <p>Bem-vindos ao nosso site! Aqui compartilhamos os detalhes do nosso grande dia e a nossa trajetória até este momento especial.</p>
+        <p>Preparamos tudo com muito carinho para receber as pessoas que mais amamos nesta celebração.</p>
+      </div>
+      <div class="historia-img">
+        <img src="./assets/fotos/imagem_teste%20(2).jpeg" alt="Foto do Casal">
+      </div>
+    </div>
   </section>
 
+  <!-- Galeria de Fotos com as demais imagens (3 a 8) -->
+  <section id="galeria">
+    <h2>Galeria de Fotos</h2>
+    <div class="galeria-grid">
+      <img src="./assets/fotos/imagem_teste%20(3).jpeg" alt="Foto 3">
+      <img src="./assets/fotos/imagem_teste%20(4).jpeg" alt="Foto 4">
+      <img src="./assets/fotos/imagem_teste%20(5).jpeg" alt="Foto 5">
+      <img src="./assets/fotos/imagem_teste%20(6).jpeg" alt="Foto 6">
+      <img src="./assets/fotos/imagem_teste%20(7).jpeg" alt="Foto 7">
+      <img src="./assets/fotos/imagem_teste%20(8).jpeg" alt="Foto 8">
+    </div>
+  </section>
+
+  <!-- Localização -->
   <section id="local">
     <h2>Cerimônia & Recepção</h2>
     <p>Espaço Floresta — Estrada das Acácias, 1000</p>
     <p>Horário: 16h00</p>
   </section>
 
+  <!-- RSVP -->
   <section id="rsvp">
     <h2>Confirmação de Presença</h2>
     <p>Por favor, confirme sua presença até o dia 15 de Setembro de 2026.</p>
     <a href="#" class="btn">Confirmar Presença</a>
   </section>
 
+  <!-- Rodapé -->
   <footer>
     <p>Pedro & Lucas — 2026</p>
   </footer>
