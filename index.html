@@ -1,1 +1,150 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nome & Nome — Nosso Casamento</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --verde-floresta: #2d4a3e;
+      --verde-claro: #f4f6f4;
+      --creme: #fbf9f5;
+      --texto: #333333;
+      --dourado: #c5a059;
+    }
 
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Montserrat', sans-serif;
+      color: var(--texto);
+      background-color: var(--creme);
+      line-height: 1.6;
+    }
+
+    h1, h2, h3 {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 400;
+    }
+
+    header {
+      background-color: var(--verde-floresta);
+      color: #ffffff;
+      text-align: center;
+      padding: 100px 20px;
+    }
+
+    header h1 {
+      font-size: 3.5rem;
+      letter-spacing: 2px;
+      margin-bottom: 10px;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+
+    nav {
+      background-color: #ffffff;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      padding: 15px;
+      position: sticky;
+      top: 0;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    }
+
+    nav a {
+      text-decoration: none;
+      color: var(--verde-floresta);
+      font-weight: 500;
+      font-size: 0.9rem;
+      text-transform: uppercase;
+    }
+
+    section {
+      max-width: 800px;
+      margin: 60px auto;
+      padding: 0 20px;
+      text-align: center;
+    }
+
+    section h2 {
+      font-size: 2.5rem;
+      color: var(--verde-floresta);
+      margin-bottom: 20px;
+    }
+
+    .btn {
+      display: inline-block;
+      background-color: var(--verde-floresta);
+      color: #ffffff;
+      padding: 12px 30px;
+      text-decoration: none;
+      border-radius: 4px;
+      margin-top: 20px;
+      font-size: 0.9rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .btn:hover {
+      background-color: #1e332a;
+    }
+
+    footer {
+      text-align: center;
+      padding: 40px;
+      background-color: var(--verde-claro);
+      color: var(--verde-floresta);
+      font-size: 0.85rem;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Pedro & Lucas</h1>
+    <p>15 de Outubro de 2026</p>
+  </header>
+
+  <nav>
+    <a href="#historia">Nossa História</a>
+    <a href="#local">O Local</a>
+    <a href="#presentes">Lista de Presentes</a>
+    <a href="#rsvp">RSVP</a>
+  </nav>
+
+  <section id="historia">
+    <h2>Nossa História</h2>
+    <p>Bem-vindos ao nosso site! Aqui compartilhamos os detalhes do nosso grande dia e a nossa trajetória até este momento especial.</p>
+  </section>
+
+  <section id="local">
+    <h2>Cerimônia & Recepção</h2>
+    <p>Espaço Floresta — Estrada das Acácias, 1000</p>
+    <p>Horário: 16h00</p>
+  </section>
+
+  <section id="rsvp">
+    <h2>Confirmação de Presença</h2>
+    <p>Por favor, confirme sua presença até o dia 15 de Setembro de 2026.</p>
+    <a href="#" class="btn">Confirmar Presença</a>
+  </section>
+
+  <footer>
+    <p>Pedro & Lucas — 2026</p>
+  </footer>
+
+</body>
+</html>
